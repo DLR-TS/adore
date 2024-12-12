@@ -1,0 +1,8 @@
+docs/
+doxygen/generated_doxygen_documentation
+technical_reference_manual/modules/
+technical_reference_manual/modules/
+technical_reference_manual/modules/*
+technical_reference_manual/modules.md
+technical_reference_manual/modules
+.aspell.en.prepl

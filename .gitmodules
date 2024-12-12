@@ -1,0 +1,32 @@
+[submodule "tools/adore_cli"]
+	path = tools/adore_cli
+	url = git@github.com:dlr-ts/adore_cli.git
+[submodule "tools/ci_teststand"]
+	path = tools/ci_teststand
+	url = git@github.com:dlr-ts/ci_teststand.git
+	ignore = untracked
+	shallow = true
+[submodule "vendor/websocketpp"]
+	path = vendor/websocketpp
+	url = https://github.com/zaphoyd/websocketpp.git
+	ignore = untracked
+	shallow = true
+[submodule "vendor/json"]
+	path = vendor/json
+	url = https://github.com/nlohmann/json.git
+	ignore = untracked
+	shallow = true
+[submodule "tools/foxbox/foxbox"]
+	path = tools/foxbox/foxbox
+	url = https://github.com/bmw-software-engineering/foxbox.git
+[submodule "tools/lichtblick/lichtblick"]
+	path = tools/lichtblick/lichtblick
+	url = https://github.com/Lichtblick-Suite/lichtblick.git
+	ignore = untracked
+	shallow = true
+[submodule "vendor/OptiNLC"]
+	path = vendor/OptiNLC
+	url = git@github.com:DLR-TS/OptiNLC.git
+[submodule "vendor/mathematics_toolbox"]
+	path = vendor/mathematics_toolbox
+	url = git@github.com:DLR-TS/mathematics_toolbox.git

@@ -1,0 +1,1 @@
+documentation/technical_reference_manual/CONTRIBUTING.md

@@ -1,0 +1,4 @@
+**/build
+.tmp
+**.log
+cmake/ignore/ignore.log
