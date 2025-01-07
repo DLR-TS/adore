@@ -10,7 +10,7 @@ trap cleanup EXIT
 source publish.env
 
 function cleanup {
-  rm -rf "${CLONE_DIRECTORY}"
+  #rm -rf "${CLONE_DIRECTORY}"
   echo "Deleted temp working directory ${CLONE_DIRECTORY}"
 }
 
@@ -47,9 +47,9 @@ CLONE_DIRECTORY="$(mktemp -d)"
 git_url="${PUBLISH_REMOTE}"
 
 
-if [[ ! -d "${DOCS_DIRECTORY}" ]]; then
-    exiterr "ERROR: docs directory: ${DOCS_DIRECTORY} does not exist.  Did you call 'make build_gh-pages'" 
-fi
+#if [[ ! -d "${DOCS_DIRECTORY}" ]]; then
+#    exiterr "ERROR: docs directory: ${DOCS_DIRECTORY} does not exist.  Did you call 'make build_gh-pages'" 
+#fi
 
 
 if [[ $PROHIBITED_REMOTES == *"$git_url"* ]]; then
