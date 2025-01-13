@@ -54,3 +54,12 @@
 [submodule "adore_scenarios/adore_simulation_scenarios"]
 	path = adore_scenarios/simulation_scenarios
 	url = git@github.com:DLR-TS/adore_simulation_scenarios.git
+[submodule "ros2_workspace/src/simulated_traffic_signal"]
+	path = ros2_workspace/src/simulated_traffic_signal
+	url = git@github.com:DLR-TS/simulated_traffic_signal.git
+[submodule "ros2_workspace/src/adore_v2x_interface"]
+	path = ros2_workspace/src/adore_v2x_interface
+	url = git@gitlab.dlr.de:csa/ros2/adore_v2x_interface.git
+[submodule "vendor/libOpenDRIVE/libOpenDRIVE"]
+	path = vendor/libOpenDRIVE/libOpenDRIVE
+	url = git@github.com:markomiz/libOpenDRIVE.git
