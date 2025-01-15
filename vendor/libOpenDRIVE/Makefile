@@ -34,7 +34,7 @@ run: build
 	docker run -it ${PROJECT}:${TAG} /tmp/libOpenDRIVE/libOpenDRIVE/build/libOpenDRIVE
 
 .PHONY: clean
-clean:  ## Clean OptiNLC build artifacts 
+clean:  ## Clean build artifacts 
 	rm -rf "${ROOT_DIR}/${PROJECT}/build"
 	rm -rf "${OUTPUT_DIRECTORY}"
 	docker rm $$(docker ps -a -q --filter "ancestor=${PROJECT}:${TAG}") --force 2> /dev/null || true
