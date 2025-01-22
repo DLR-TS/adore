@@ -72,6 +72,11 @@ clean: clean_adore_cli ## Clean ADORe  build artifacts
 	cd ros2_workspace && make clean
 	rm -rf build
 
+.PHONY: trace
+trace: 
+	make adore_cli_run cmd="ros2-tracer -t 5 -o"
+	cd vendor/ros2_observer/trace_compass && make start
+
 .PHONY:lint_nodes
 lint_nodes:
 	@if [ -f /.dockerenv ]; then \

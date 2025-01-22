@@ -10,7 +10,7 @@ help:
 
 .PHONY: build
 build: ## Build all ROS2 packages
-	source /opt/ros/$${ROS_DISTRO}/setup.bash && colcon build --parallel-workers $$(nproc)
+	source /opt/ros/$${ROS_DISTRO}/setup.bash && colcon build --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo --parallel-workers $$(nproc)
 
 .PHONY: clean_build
 clean_build: clean build ## Clean and build all ROS2 packages
