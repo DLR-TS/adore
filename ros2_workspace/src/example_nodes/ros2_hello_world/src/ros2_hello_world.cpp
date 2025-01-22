@@ -51,6 +51,7 @@ class Ros2HelloWorld : public rclcpp::Node
       message.data = "Hello, World from ROS2!";
       RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str());
       publisherString->publish(message);
+      rclcpp::sleep_for(std::chrono::seconds(1));
     }
 
     /******************************* SUBSCRIBER RELATED FUNCTIONS************************************************************/

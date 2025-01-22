@@ -26,6 +26,9 @@ BRANCH:=$(shell bash ${MAKE_GADGETS_DIR}/tools/branch_name.sh)
 ADORE_CLI_BRANCH:=$(shell bash ${MAKE_GADGETS_DIR}/tools/branch_name.sh)
 ADORE_CLI_IMAGE:=$(shell cd tools/adore_cli && make image_adore_cli)_${BRANCH}
 ADORE_CLI_CONTAINER_NAME:=$(subst :,_,${ADORE_CLI_IMAGE})
+ROS_HOME:="${ROOT_DIR}/.log/.ros"
+TRACE_DURATION_s:=5
+
 
 include ${SUBMODULES_PATH}/adore_cli/ci_teststand/ci_teststand.mk
 include utils.mk
@@ -71,6 +74,11 @@ clean: clean_adore_cli ## Clean ADORe  build artifacts
 	cd libraries && make clean
 	cd ros2_workspace && make clean
 	rm -rf build
+
+.PHONY: trace
+trace: ## Generate tracing data with ros2_traceing 
+	make adore_cli_run cmd="ros2-tracer -t ${TRACE_DURATION_s} -o"
+	cd vendor/ros2_observer/trace_compass && make start
 
 .PHONY:lint_nodes
 lint_nodes:

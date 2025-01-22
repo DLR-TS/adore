@@ -8,14 +8,16 @@ SUBMODULES_PATH:=${ROOT_DIR}
 MAKEFLAGS += --no-print-directory
 
 .PHONY:build
-build:
+build:  ## build all vendor libraries and copy output to ./build
 	cd mathematics_toolbox && make build
 	cd OptiNLC && make build
+	cd ros2_observer && make build
 	cd libOpenDRIVE && make build
 	mkdir -p build
 	cp mathematics_toolbox/eigen/build build/eigen -r
 	cp mathematics_toolbox/osqp/build build/osqp -r
 	cp OptiNLC/OptiNLC/build build/OptiNLC -r
+	cp ros2_observer/build build/ros2_observer -r
 	cp libOpenDRIVE/libOpenDRIVE/build build/libOpenDRIVE -r
 
 #	cd build/eigen && find . -type f -exec sed -i "s|/tmp/|$$(pwd)/|g" {} +
@@ -34,4 +36,5 @@ clean:
 	rm -rf build
 	cd OptiNLC && make clean
 	cd mathematics_toolbox && make clean
+	cd ros2_observer && make clean
 	cd libOpenDRIVE && make clean
