@@ -18,6 +18,9 @@ clang-tidy
 cpplint
 cppcheck
 
+# Language servers and intellicense
+clangd
+python3-pylsp
 
 ## Plotting
 ros-${ROS_DISTRO}-plotjuggler-ros
